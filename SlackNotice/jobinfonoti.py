@@ -133,15 +133,16 @@ try:
     driver.switch_to.window(driver.window_handles[-1])
 
     # 네이버 로그인
-    elem_id = driver.find_element_by_xpath('/html/body/div[1]/div[3]/div/form/fieldset/div[1]/div[1]/span/input')
+    elem_id = driver.find_element_by_xpath("//input[@name='id']")
     elem_id.send_keys(LOGIN_ID)
     time.sleep(1)
-    elem_password = driver.find_element_by_xpath('/html/body/div[1]/div[3]/div/form/fieldset/div[2]/div[1]/span/input')
+    elem_password = driver.find_element_by_xpath("//input[@name='pw']")
     elem_password.send_keys(LOGIN_PASSWORD)
     time.sleep(1)
     # clipboard_input('/html/body/div[1]/div[3]/div/form/fieldset/div[1]/div[1]/span/input', LOGIN_ID)
     # clipboard_input('/html/body/div[1]/div[3]/div/form/fieldset/div[2]/div[1]/span/input', LOGIN_PASSWORD)
-    elem = driver.find_element_by_xpath('/html/body/div[1]/div[3]/div/form/fieldset/input')
+    # elem = driver.find_element_by_xpath('/html/body/div[1]/div[3]/div/form/fieldset/input')
+    elem = driver.find_element_by_xpath("//input[@id='log.login']")
     elem.click()
 
     # 창
