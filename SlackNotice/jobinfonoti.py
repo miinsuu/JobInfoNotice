@@ -9,6 +9,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import pyperclip
 
+LOGIN_ID = 'myson0545'
+LOGIN_PASSWORD = 'alstn0677'
 
 title_dict = {}
 title_link_dict = {}
@@ -129,8 +131,8 @@ try:
     driver.switch_to.window(driver.window_handles[-1])
 
     # 네이버 로그인
-    clipboard_input('/html/body/div[1]/div[3]/div/form/fieldset/div[1]/div[1]/span/input', "myson0545")
-    clipboard_input('/html/body/div[1]/div[3]/div/form/fieldset/div[2]/div[1]/span/input', "alstn0677")
+    clipboard_input('/html/body/div[1]/div[3]/div/form/fieldset/div[1]/div[1]/span/input', LOGIN_ID)
+    clipboard_input('/html/body/div[1]/div[3]/div/form/fieldset/div[2]/div[1]/span/input', LOGIN_PASSWORD)
     elem = driver.find_element_by_xpath(
         '/html/body/div[1]/div[3]/div/form/fieldset/input')
     elem.click()
