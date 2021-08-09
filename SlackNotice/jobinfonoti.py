@@ -11,6 +11,7 @@ import pyperclip
 
 LOGIN_ID = 'myson0545'
 LOGIN_PASSWORD = 'alstn0677'
+CHROME_DRIVER = '/app/.chromedriver/bin/chromedriver'
 
 title_dict = {}
 title_link_dict = {}
@@ -121,7 +122,8 @@ try:
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--disable-dev-shm-usage')
     chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
-    driver = webdriver.Chrome(executable_path=r'C:/chromedriver.exe', options=chrome_options)
+    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    # driver = webdriver.Chrome(executable_path=r'C:/chromedriver.exe', options=chrome_options)
 
     # 독취사 접속
     driver.get("https://cafe.naver.com/dokchi/485362")
