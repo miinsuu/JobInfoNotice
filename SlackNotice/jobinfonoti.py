@@ -9,8 +9,6 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import pyperclip
 
-LOGIN_ID = 'myson0545'
-LOGIN_PASSWORD = 'alstn0677'
 CHROME_DRIVER = '/app/.chromedriver/bin/chromedriver'
 
 title_dict = {}
@@ -123,34 +121,16 @@ try:
     chrome_options.add_argument('--disable-dev-shm-usage')
     chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
     driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
-    # driver = webdriver.Chrome(executable_path=r'C:/chromedriver.exe', options=chrome_options)
 
     # 독취사 접속
     driver.get("https://cafe.naver.com/dokchi/485362")
     time.sleep(1)
 
     # 창
-    # driver.switch_to.window(driver.window_handles[-1])
-
-    # 네이버 로그인
-    # elem_id = driver.find_element_by_id('id')
-    # elem_id.send_keys(LOGIN_ID)
-    # time.sleep(1)
-    # elem_password = driver.find_element_by_id('pw')
-    # elem_password.send_keys(LOGIN_PASSWORD)
-    # time.sleep(1)
-    # # clipboard_input('/html/body/div[1]/div[3]/div/form/fieldset/div[1]/div[1]/span/input', LOGIN_ID)
-    # # clipboard_input('/html/body/div[1]/div[3]/div/form/fieldset/div[2]/div[1]/span/input', LOGIN_PASSWORD)
-    # # elem = driver.find_element_by_xpath('/html/body/div[1]/div[3]/div/form/fieldset/input')
-    # elem = driver.find_element_by_id('log.login')
-    # elem.click()
-
-    # 창
     driver.switch_to.window(driver.window_handles[0])
     time.sleep(1)
 
     # 금융권 공고
-    # elem = driver.find_element_by_xpath('/html/body/div[2]/div/div[6]/div[1]/div[3]/div[2]/ul[8]/li[10]/a')
     elem = driver.find_element_by_id('menuLink5271')
     elem.click()
     time.sleep(2)
@@ -195,7 +175,6 @@ try:
 
     # 이공계 공고
     driver.switch_to.default_content()
-    # elem = driver.find_element_by_xpath('/html/body/div[2]/div/div[6]/div[1]/div[3]/div[2]/ul[8]/li[9]/a')
     elem = driver.find_element_by_id('menuLink5269')
     elem.click()
     time.sleep(2)
@@ -240,7 +219,6 @@ try:
 
     # 인턴 공고
     driver.switch_to.default_content()
-    # elem = driver.find_element_by_xpath('/html/body/div[2]/div/div[6]/div[1]/div[3]/div[2]/ul[8]/li[4]/a')
     elem = driver.find_element_by_id('menuLink133')
     elem.click()
     time.sleep(2)
@@ -285,7 +263,6 @@ try:
 
     # 연구개발/IT 공고
     driver.switch_to.default_content()
-    # elem = driver.find_element_by_xpath('/html/body/div[2]/div/div[6]/div[1]/div[3]/div[2]/ul[25]/li[5]/a')
     elem = driver.find_element_by_id('menuLink3479')
     elem.click()
     time.sleep(2)
