@@ -130,20 +130,20 @@ try:
     time.sleep(1)
 
     # 창
-    driver.switch_to.window(driver.window_handles[-1])
+    # driver.switch_to.window(driver.window_handles[-1])
 
     # 네이버 로그인
-    elem_id = driver.find_element_by_id('id')
-    elem_id.send_keys(LOGIN_ID)
-    time.sleep(1)
-    elem_password = driver.find_element_by_id('pw')
-    elem_password.send_keys(LOGIN_PASSWORD)
-    time.sleep(1)
-    # clipboard_input('/html/body/div[1]/div[3]/div/form/fieldset/div[1]/div[1]/span/input', LOGIN_ID)
-    # clipboard_input('/html/body/div[1]/div[3]/div/form/fieldset/div[2]/div[1]/span/input', LOGIN_PASSWORD)
-    # elem = driver.find_element_by_xpath('/html/body/div[1]/div[3]/div/form/fieldset/input')
-    elem = driver.find_element_by_id('log.login')
-    elem.click()
+    # elem_id = driver.find_element_by_id('id')
+    # elem_id.send_keys(LOGIN_ID)
+    # time.sleep(1)
+    # elem_password = driver.find_element_by_id('pw')
+    # elem_password.send_keys(LOGIN_PASSWORD)
+    # time.sleep(1)
+    # # clipboard_input('/html/body/div[1]/div[3]/div/form/fieldset/div[1]/div[1]/span/input', LOGIN_ID)
+    # # clipboard_input('/html/body/div[1]/div[3]/div/form/fieldset/div[2]/div[1]/span/input', LOGIN_PASSWORD)
+    # # elem = driver.find_element_by_xpath('/html/body/div[1]/div[3]/div/form/fieldset/input')
+    # elem = driver.find_element_by_id('log.login')
+    # elem.click()
 
     # 창
     driver.switch_to.window(driver.window_handles[0])
