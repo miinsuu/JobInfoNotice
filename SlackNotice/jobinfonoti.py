@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -29,7 +30,7 @@ def clipboard_input(user_xpath, user_input):
 
 # 새로운 채용 공고가 업데이트 되면 슬랙 알림 전송
 def send_message_to_slack():
-    webhook_url = 'https://hooks.slack.com/services/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'
+    webhook_url = os.environ['WEBHOOK_URL']
     print_str = ':bell: 채용공고 알림 :bell:\n'
     no_update = True
 
