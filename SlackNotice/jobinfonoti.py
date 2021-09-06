@@ -17,17 +17,6 @@ title_link_dict = {}
 time_dict = {}
 
 
-def clipboard_input(user_xpath, user_input):
-        temp_user_input = pyperclip.paste()  # 사용자 클립보드를 따로 저장
-
-        pyperclip.copy(user_input)
-        driver.find_element_by_xpath(user_xpath).click()
-        ActionChains(driver).key_down(Keys.CONTROL).send_keys('v').key_up(Keys.CONTROL).perform()
-
-        pyperclip.copy(temp_user_input)  # 사용자 클립보드에 저장 된 내용을 다시 가져 옴
-        time.sleep(1)
-
-
 # 새로운 채용 공고가 업데이트 되면 슬랙 알림 전송
 def send_message_to_slack():
     webhook_url = os.environ['WEBHOOK_URL']
